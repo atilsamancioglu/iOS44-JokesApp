@@ -11,6 +11,9 @@
 		FCAB7817289FD7C800AD92DF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAB7816289FD7C800AD92DF /* ContentView.swift */; };
 		FCAB7819289FD7C900AD92DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCAB7818289FD7C900AD92DF /* Assets.xcassets */; };
 		FCAB781C289FD7C900AD92DF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCAB781B289FD7C900AD92DF /* Preview Assets.xcassets */; };
+		FCAB7824289FD93C00AD92DF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FCAB7823289FD93C00AD92DF /* Alamofire */; };
+		FCAB7827289FD9C000AD92DF /* JokesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAB7826289FD9C000AD92DF /* JokesData.swift */; };
+		FCAB7829289FD9DE00AD92DF /* JokesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAB7828289FD9DE00AD92DF /* JokesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		FCAB7816289FD7C800AD92DF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FCAB7818289FD7C900AD92DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCAB781B289FD7C900AD92DF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FCAB7825289FD99400AD92DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FCAB7826289FD9C000AD92DF /* JokesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesData.swift; sourceTree = "<group>"; };
+		FCAB7828289FD9DE00AD92DF /* JokesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCAB7824289FD93C00AD92DF /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +58,11 @@
 		FCAB7813289FD7C800AD92DF /* JokeSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				FCAB7825289FD99400AD92DF /* Info.plist */,
 				FCAB7814289FD7C800AD92DF /* JokeSwiftUIApp.swift */,
 				FCAB7816289FD7C800AD92DF /* ContentView.swift */,
+				FCAB7826289FD9C000AD92DF /* JokesData.swift */,
+				FCAB7828289FD9DE00AD92DF /* JokesViewModel.swift */,
 				FCAB7818289FD7C900AD92DF /* Assets.xcassets */,
 				FCAB781A289FD7C900AD92DF /* Preview Content */,
 			);
@@ -83,6 +93,9 @@
 			dependencies = (
 			);
 			name = JokeSwiftUI;
+			packageProductDependencies = (
+				FCAB7823289FD93C00AD92DF /* Alamofire */,
+			);
 			productName = JokeSwiftUI;
 			productReference = FCAB7811289FD7C800AD92DF /* JokeSwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +124,9 @@
 				Base,
 			);
 			mainGroup = FCAB7808289FD7C800AD92DF;
+			packageReferences = (
+				FCAB7822289FD93C00AD92DF /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = FCAB7812289FD7C800AD92DF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,6 +155,8 @@
 			files = (
 				FCAB7817289FD7C800AD92DF /* ContentView.swift in Sources */,
 				FCAB7815289FD7C800AD92DF /* JokeSwiftUIApp.swift in Sources */,
+				FCAB7827289FD9C000AD92DF /* JokesData.swift in Sources */,
+				FCAB7829289FD9DE00AD92DF /* JokesViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +288,7 @@
 				DEVELOPMENT_TEAM = 7CZ8CAJJXF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JokeSwiftUI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +318,7 @@
 				DEVELOPMENT_TEAM = 7CZ8CAJJXF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JokeSwiftUI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -339,6 +359,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FCAB7822289FD93C00AD92DF /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FCAB7823289FD93C00AD92DF /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FCAB7822289FD93C00AD92DF /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FCAB7809289FD7C800AD92DF /* Project object */;
 }
