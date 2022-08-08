@@ -8,25 +8,33 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     @ObservedObject var jokesVM = JokesViewModel()
     
     var body: some View {
-        NavigationView{
+       
+        NavigationView {
             
-            List(jokesVM.jokes){ element in
+            List(jokesVM.jokes) { element in
                 Text(element.joke)
-                }.navigationBarItems(
-                  trailing: Button(action: addJoke, label: { Text("Get New Joke") }))
-            .navigationBarTitle("Jokes App")
-             
+            }
+            .toolbar {
+                Button(action: addJoke) {
+                    Text("Get New Joke")
+                }
+            }
+            .navigationTitle("Jokes App")
+            
         }
+        
     }
     
-    func addJoke(){
+    func addJoke() {
         jokesVM.getJokes(count: 1)
     }
-
 }
+
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
